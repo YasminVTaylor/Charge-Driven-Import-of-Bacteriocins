@@ -8,5 +8,5 @@ An output file is create using the command 'out' followed by a file name.
 The 'norotate' command prevents co-ordinates from rotating which may otherwise give false results.
 
 To run the script cpptraj from AmberTools must be installed on the local machine
-The script can be run using the command below:
+The script can be run using the command:
 cpptraj<cpptraj_rmsd_script.txt
