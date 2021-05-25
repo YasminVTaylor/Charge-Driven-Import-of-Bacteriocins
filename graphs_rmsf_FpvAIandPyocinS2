@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Line graph of whole RMSF
+
+data = np.loadtxt("rmsf_all.dat")
+x = data[:,0]
+y = data[:,1]
+
+plt.title("RMSF of FpvAI and Pyocin S2 with Labile Domain")
+plt.xlabel("Residue")  
+plt.ylabel("RMSF Å") 		 
+plt.plot(x, y, 'k-', linewidth=0.5) # need to figure outhow to change colour for pyocin
+plt.ylim(0,15)
+plt.savefig("rmsf_all.png")
+plt.show()
+
+
+# Line graph of FpvAI RMSF
+
+data = np.loadtxt("rmsf1.dat")
+x = data[:,0]
+y = data[:,1]
+
+plt.title("RMSF of FpvAI with Labile Domain")
+plt.xlabel("Residue")
+plt.ylabel("RMSF Å") 		
+plt.plot(x, y, 'g-', linewidth=0.5, label="FpvAI")
+plt.legend(loc="upper left")
+plt.ylim(0,15)
+plt.savefig("rmsf_FpvAI.png")
+plt.show()
+
+
+# Line graph of PyocinS2 RMSF
+
+data = np.loadtxt("rmsf2.dat")
+x = data[:,0]
+y = data[:,1]
+
+plt.title("RMSF of Pyocin S2 with Labile Domain")
+plt.xlabel("Residue")
+plt.ylabel("RMSF Å") 		
+plt.plot(x, y, 'b-', linewidth=0.5, label="PyoS2")
+plt.legend(loc="upper left")
+plt.ylim(0,15)
+plt.savefig("rmsf_pyocinS2.png")
+plt.show()
