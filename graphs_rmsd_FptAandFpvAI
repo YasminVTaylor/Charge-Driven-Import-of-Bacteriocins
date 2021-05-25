@@ -9,19 +9,12 @@ import matplotlib.pyplot as plt
 data = np.loadtxt("rmsd_fpvai_WP.dat")
 x = data[:,0]
 y = data[:,1]
-plt.title("RMSD of FpvAI, Pyocin S2 and FptA with the Labile Domain")
+plt.title("RMSD of FpvAI and FptA with the Labile Domain")
 plt.xlabel("Frame")  
 plt.ylabel("RMSD Å") 
 plt.plot(x, y, 'g-', linewidth=0.5, label="FpvAI")
 plt.legend(loc="upper right")
 plt.ylim(0,10)	
-
-
-data = np.loadtxt("pyocin_WP.dat")
-x = data[:,0]
-y = data[:,1]		
-plt.plot(x, y, 'b-', linewidth=0.5, label="PyoS2")
-plt.legend(loc="upper right")
 
 
 data = np.loadtxt("rmsd_fpta_WP.dat")
@@ -29,7 +22,7 @@ x = data[:,0]
 y = data[:,1]	 
 plt.plot(x, y, color="deeppink", linewidth=0.5, label="FptA")
 plt.legend(loc="upper right")
-plt.savefig("rmsd_fpta_fpvia_pyoS2_WP.png")
+plt.savefig("rmsd_fpta_fpvia_WP.png")
 plt.show()
 
 # Line graph of FpvAI and PyoS2 RMSD combined No plug 
@@ -37,7 +30,7 @@ plt.show()
 data = np.loadtxt("fpvai_NP.dat")
 x = data[:,0]
 y = data[:,1]
-plt.title("RMSD of FpvAI, Pyocin S2 and FptA without the Labile Domain")
+plt.title("RMSD of FpvAI and FptA without the Labile Domain")
 plt.xlabel("Frame")  
 plt.ylabel("RMSD Å") 
 plt.plot(x, y, 'g-', linewidth=0.5, label="FpvAI")
@@ -45,17 +38,10 @@ plt.legend(loc="upper right")
 plt.ylim(0,10)	
 
 
-data = np.loadtxt("pyocin_NP.dat")
-x = data[:,0]
-y = data[:,1]		
-plt.plot(x, y, 'b-', linewidth=0.5, label="PyoS2")
-plt.legend(loc="upper right")
-
-
 data = np.loadtxt("rmsd_fpta_NP.dat")
 x = data[:,0]
 y = data[:,1]	 
 plt.plot(x, y, color="deeppink", linewidth=0.5, label="FptA")
 plt.legend(loc="upper right")
-plt.savefig("rmsd_fpta_fpvia_pyoS2_NP.png")
+plt.savefig("rmsd_fpta_fpvia_NP.png")
 plt.show()
