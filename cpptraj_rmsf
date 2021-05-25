@@ -1,0 +1,40 @@
+parm step5_input.parm7
+
+trajin step7_1.nc
+trajin step7_2.nc
+trajin step7_3.nc
+trajin step7_4.nc
+trajin step7_5.nc
+trajin step7_6.nc
+trajin step7_7.nc
+trajin step7_8.nc
+trajin step7_9.nc
+trajin step7_10.nc
+trajin step7_11.nc
+trajin step7_12.nc
+trajin step7_13.nc
+trajin step7_14.nc
+trajin step7_15.nc
+trajin step7_16.nc
+trajin step7_17.nc
+trajin step7_18.nc
+trajin step7_19.nc
+trajin step7_20.nc
+
+
+######## RMSF ########
+
+autoimage
+rms :*@CA fist out rmsd_all.dat norotate
+
+# rmsf of all
+#averaged by residue 
+
+atomicfluct out rmsf_all.dat :1-933@CA byres
+
+# rmsf of FpvAI
+atomicfluct out rmsf1.dat :1-770,@CA byres
+
+
+# rmsf of PyocinS2 
+atomicfluct out rmsf2.dat :772-933,@CA byres
