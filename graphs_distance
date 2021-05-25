@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Distance - pyo N terminal from FpvAI pore residue 185
+#with plug
+
+data = np.loadtxt(open("pyoNT_distance.csv", "rb"), delimiter=",", skiprows=1)
+
+# Distance - pyo N terminal from FpvAI average pore residue 186/663/751
+x = data[:,0]
+y = data[:,4]
+
+plt.title("PyoS2 Residues 1-10 Distance from FpvAI Pore Residues")
+plt.xlabel("Frame")
+plt.ylabel("Distance Å") 	
+plt.ylim(0, 55)
+plt.plot(x, y, 'c-', linewidth=0.5, label="With Labile")
+plt.legend(loc="lower right")
+
+# Distance - pyo N terminal from FpvAI average pore residue 14/492/580
+# without plug 
+
+data = np.loadtxt("pyoNT_average.dat")
+x = data[:,0]
+y = data[:,1]
+
+plt.plot(x, y, 'r-', linewidth=0.5, label="No Labile")
+plt.legend(loc="lower right")
+plt.savefig("distance_avg_overlay.png")
+plt.show()
+
