@@ -24,7 +24,6 @@ for protein in proteins:
     plt.xlabel("Z Axis", fontsize=14)  
     plt.ylabel("Isoelectric Point", fontsize=14) 	
     plt.xlim(-25,50)
-    #plt.xticks([i+5 for i in range (-25, 45)])
     plt.ylim(0,13)
     plt.plot(x, y, "o-", linewidth=1, label=protein)
     plt.legend(loc="upper right")
