@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Line graph of whole RMSF
+
+data = np.loadtxt("rmsf_all.dat")
+x = data[:,0]
+y = data[:,1]
+
+plt.title("RMSF of FptA with Labile Domain")
+plt.xlabel("Residue")  
+plt.ylabel("RMSF Å")
+plt.ylim(0,14) 		 
+plt.plot(x, y, color="deeppink", linewidth=0.5)
+plt.savefig("rmsf_FptA_with_labile.png")
+plt.show()
+
