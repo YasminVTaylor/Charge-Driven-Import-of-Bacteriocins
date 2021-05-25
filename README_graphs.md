@@ -9,3 +9,9 @@ The figure file name can be adjusted to suit the user.
 
 The distance graph code skip the first row as this row contained headers
 and not numerical data
+
+Graph files; RSMD, RMSF and distance are complementary to the data
+outputted from the CPPTraj scripts.
+
+Graph files; electrostatic potential +(notscaled), and pI are
+complementary to the data outputted from pore_mde.py
