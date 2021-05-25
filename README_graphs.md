@@ -7,5 +7,5 @@ The line colour, width and lable can be spcified following 'plt.plot'.
 The y limitation can be removed or adjusted to fit the data range. 
 The figure file name can be adjusted to suit the user.
 
-The distance graphs skip the first row as this row contained headers
+The distance graph code skip the first row as this row contained headers
 and not numerical data
