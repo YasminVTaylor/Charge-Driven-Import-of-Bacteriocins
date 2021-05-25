@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 23 16:33:00 2021
+
+@author: bs17yvt
+"""
+
+import numpy as np 
+import matplotlib.pyplot as plt 
+
+#on same plot
+# when fix worms for "1FEP_FepA" then add in
+
+proteins = ["5ODW_FpvAI", "1FEP_FepA", "1BY3_FhuA", "1NQE_BtuB", "1PNZ_FecA", "1XKW_FptA", "2HDF_CirA", "2IAH_FpvA", "3CSL_HasR", "3EFM_FauA", "3FHH_ShuA", "4RDT_ZnuD", "5FOK_PiuA_Pa", "5FP1_PiuA_Ab", "5NEC_PiuD", "6E4V_FhuE", "6I97_FoxA", "6V81_YncD", "6BPM_Fiu"]
+
+for protein in proteins:
+    
+    data = np.loadtxt(protein+"_res_pot.txt")
+
+    x = data[:,0]
+    y = data[:,1]
+    plt.figure() 
+    plt.title(protein+" Pore Electrostatic Potential", fontsize=16)
+    plt.xlabel("Z Axis", fontsize=14)  
+    plt.ylabel("Electrostatic Potential", fontsize=14) 	
+    plt.xlim(-20,50)
+    plt.plot(x, y, "-o", color="blueviolet", linewidth=1, label=protein)
+    plt.legend(loc="upper right")
+    plt.grid(":")
+    plt.savefig(protein+"_ep_notscaled.png")
+    plt.show()
