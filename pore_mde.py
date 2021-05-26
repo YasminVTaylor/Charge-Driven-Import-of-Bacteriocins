@@ -229,7 +229,7 @@ if __name__ == '__main__':
                 str('%8.3f' % (float(point[1]))).rjust(8),
                 str('%8.3f' % (float(point[2]))).rjust(8),
                 str('%6.2f' % (float(1.00))).rjust(6),
-                str('%6.2f' % (float(round(pot,2)))).ljust(6),
+                str('%6.2f' % (float(round(-pot,2)))).ljust(6),
                 "C".rjust(12)))
         k += 1
     f.write("TER\nEND")
