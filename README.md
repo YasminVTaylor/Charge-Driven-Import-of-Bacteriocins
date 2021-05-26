@@ -60,8 +60,8 @@ The pore co-ordinates are defined (prior to script usage) using ChexViS (an webs
 The β-factors in the PDB are replaced with the electrostatic potential values at each co-ordinate.  
 
 To run this script:
-python3 pore_mde.py (protein name)_(PDB identifyer)
-e.g. python3 pore_mde.py FpvAI_5ODW
+python3 pore_mde.py (PDB identifyer)_(protein name)
+e.g. python3 pore_mde.py 5ODW_FpvAI
  
 ## Graphs 
 
